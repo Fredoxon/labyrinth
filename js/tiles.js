@@ -1121,6 +1121,12 @@ const door = {
 
 const forest = {
     both: Object.assign({}, OpenDoors, {
+        canLeaveToTheBottom: function(player) {
+            return false;
+        },
+        canLeaveToTheLeft: function(player) {
+            return false;
+        },
         createImages: function() {
             this.wallTop = this.createImage("tiles/rooms/door/topForest.svg");
             this.wallRight = this.createImage("tiles/rooms/door/rightForest.svg");
